@@ -6,11 +6,11 @@ from movie.models import Movie
 import random
 import json
 
-
 def index(request):
     result = {}
     nums = []
     movie = Movie.objects.all().all()
+    print(movie)
     for i in range(7):
         num = random.randint(0, len(movie))
         nums.append(num)
@@ -20,7 +20,6 @@ def index(request):
         result['type{}'.format(i)] = movie[nums[i]].type
         result['name{}'.format(i)] = movie[nums[i]].m_name
     return render(request, 'movie.html', result)
-
 
 def search(request):
     if request.method == "POST":
@@ -39,3 +38,9 @@ def search(request):
         result['name{}'.format(i)] = movie[nums[i]].m_name
     # print(result)
     return HttpResponse(json.dumps(result))
+
+#def search_key(request):
+    # raw code without test
+
+    
+
