@@ -8,8 +8,8 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="css/search.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/static/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/static/search.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body style="background-color:#fafafa">
@@ -27,22 +27,22 @@
     <div class="row">
         <div class="col s1 offset-s1">
             <div class="collection">
-                <a href="#!" class="collection-item">动作</a>
-                <a href="#!" class="collection-item">科幻</a>
-                <a href="#!" class="collection-item">喜剧</a>
-                <a href="#!" class="collection-item">冒险</a>
-                <a href="#!" class="collection-item">动画</a>
-                <a href="#!" class="collection-item">剧情</a>
-                <a href="#!" class="collection-item">爱情</a>
-                <a href="#!" class="collection-item">犯罪</a>
-                <a href="#!" class="collection-item">战争</a>
-                <a href="#!" class="collection-item">悬疑</a>
-                <a href="#!" class="collection-item">玄幻</a>
-                <a href="#!" class="collection-item">传记</a>
-                <a href="#!" class="collection-item">同性</a>
-                <a href="#!" class="collection-item">家庭</a>
-                <a href="#!" class="collection-item">惊悚</a>
-                <a href="#!" class="collection-item">西部</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">动作</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">科幻</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">喜剧</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">冒险</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">动画</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">剧情</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">爱情</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">犯罪</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">战争</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">悬疑</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">玄幻</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">传记</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">同性</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">家庭</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">惊悚</a>
+                <a id= 'search' onclick="search_movie(this)" class="collection-item">西部</a>
             </div>
         </div>
         <div class="col s7" style="margin-left: 5em">
@@ -50,39 +50,39 @@
                 <div class="col s4">
                     <div class="card small">
                         <div class="card-image">
-                            <img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2282434035.jpg">
+                            <img id="src0" src={{ src0 }}>
                         </div>
                         <div class="card-content" style="height: 1em;">
-                            <p>科幻/动画</p>
+                            <p id="type0">{{ type0 }}</p>
                         </div>
                         <div class="card-action">
-                            <a href="#">饥饿游戏3：嘲笑鸟(下)</a>
+                            <a id="name0" href="#">{{ name0 }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col s4">
                     <div class="card small">
                         <div class="card-image">
-                            <img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1666780812.jpg">
+                            <img id="src1" src={{ src1 }}>
                         </div>
                         <div class="card-content">
-                            <p>科幻/动画</p>
+                            <p id="type1">{{ type1 }}</p>
                         </div>
                         <div class="card-action">
-                            <a href="#">壳中少女：排气</a>
+                            <a id="name1" href="#">{{ name1 }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col s4">
                     <div class="card small">
                         <div class="card-image">
-                            <img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1744650844.jpg">
+                            <img id="src2" src={{ src2 }}>
                         </div>
                         <div class="card-content">
-                            <p>剧情/爱情/动画</p>
+                            <p id="type2">{{ type2 }}</p>
                         </div>
                         <div class="card-action">
-                            <a href="#">图书馆战争：革命之翼</a>
+                            <a id="name2" href="#">{{ name2 }}</a>
                         </div>
                     </div>
                 </div>
@@ -91,39 +91,39 @@
                 <div class="col s4">
                     <div class="card small">
                         <div class="card-image">
-                            <img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1903380040.jpg">
+                            <img  id="src3" src={{ src3 }}>
                         </div>
                         <div class="card-content">
-                            <p>剧情</p>
+                            <p id="type3">{{ type3 }}</p>
                         </div>
                         <div class="card-action">
-                            <a href="#">浮城谜事</a>
+                            <a id="name3" href="#">{{ name3 }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col s4">
                     <div class="card small">
                         <div class="card-image">
-                            <img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1722545381.jpg">
+                            <img id="src4" src={{ src4 }}>
                         </div>
                         <div class="card-content">
-                            <p>动作/奇幻/冒险</p>
+                            <p id="type4">{{ type4 }}</p>
                         </div>
                         <div class="card-action">
-                            <a href="#">最后的巫师猎人</a>
+                            <a id="name4" href="#">{{ name4 }}</a>
                         </div>
                     </div>
                 </div>
                 <div class="col s4">
                     <div class="card small">
                         <div class="card-image">
-                            <img src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2246217861.jpg">
+                            <img id="src5" src={{ src5 }}>
                         </div>
                         <div class="card-content">
-                            <p>动作/科幻/冒险</p>
+                            <p id="type5">{{ type5 }}</p>
                         </div>
                         <div class="card-action">
-                            <a href="#">侏罗纪世界</a>
+                            <a id="name5" href="#">{{ name5 }}</a>
                         </div>
                     </div>
                 </div>
@@ -229,7 +229,8 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.min.js"></script>
+    <script src="/static/materialize.min.js"></script>
+    <script src="/static/movie.js"></script>
 </body>
 
 </html>
