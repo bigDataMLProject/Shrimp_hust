@@ -14,5 +14,7 @@ def recommendationM(uid):
     sqlContext.registerDataFrameAsTable(dataf,'user')
 
     id =  sqlContext.sql('select id from user where u_id ='+str(uid)).take(1)[0]['id']
-    model
-    result = model.recommendProducts(id,10)
+
+    model=MatrixFactorizationModel.load(sc,path)
+    result = list(map(lambda x:x[1],model.recommendProducts(id,10)))
+
