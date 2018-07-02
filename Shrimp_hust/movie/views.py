@@ -73,8 +73,23 @@ def getid(request):  # 获取用户登录名，根据用户名进行推荐
     return HttpResponse(json.dumps(recommend))
 
 
-def select_movie(request):  # 未完成
+def select_movie(request):  # 未完成 search by key word
     res = {}
     if request.method == "POST":
         info = request.POST.get("info")  # 获取搜索框的内容，根据info进行查询并返回数据
+        movies_exact = Movie.objects.get(m_name=info)
+        movie_apro = Movie.objects.filter(m_name__contains=info)
+        # srci typei namei
+        if movies_exact :
+            res['src{}'.format(0)] = movies_exact.imgurl
+            res['type{}'.format(0)] = movies_exact.type
+            res['name{}'.format(0)] = movies_exact.m_name
+
+        for x in range(len(movie_apro)):
+            if movie_exact :
+                x+=1
+            res['src{}'.format(x)] = movies_exact[x].imgurl
+            res['type{}'.format(x)] = movies_exact[x].type
+            res['name{}'.format(x)] = movies_exact[x].m_name
+
     return HttpResponse(json.dumps(res))
