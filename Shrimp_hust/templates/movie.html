@@ -34,8 +34,8 @@
         <div class="col s6 offset-s3">
             <div class="search">
                 <div class="search-wrapper card">
-                    <input id="search">
-                    <i class="material-icons" id="search_start">search</i>
+                    <input id="search" onkeypress="select_movie();">
+                    <a onclick="select_movie();"><i class="material-icons" id="search_start">search</i></a>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
            <div style="position: relative;margin-top:10px;margin-right:50px" >
         <div class="fixed-action-btn horizontal" style="position: absolute; display: inline-block;">
             <a class="btn-floating btn-large red">
-            <i class="large material-icons">mode_edit</i>
+            <i class="large material-icons">menu</i>
             </a>
          <ul>
             <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
@@ -140,7 +140,7 @@
                             <p id="type4">{{ type4 }}</p>
                         </div>
                         <div class="card-action">
-                            <a onclick="show_movie(this)"   id="name4" >{{ name4 }}</a>
+                            <a onclick="show_movie(this)" id="name4" >{{ name4 }}</a>
                         </div>
                     </div>
                 </div>
@@ -165,43 +165,43 @@
                     <h4>推荐电影</h4>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >摩纳哥王妃</a>
+                    <a id="rname0" onclick="show_movie(this)" >摩纳哥王妃</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >维克多·弗兰肯斯坦</a>
+                    <a id="rname1" onclick="show_movie(this)" >维克多·弗兰肯斯坦</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >X战警：逆转未来</a>
+                    <a id="rname2" onclick="show_movie(this)" >X战警：逆转未来</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >北京遇上西雅图</a>
+                    <a id="rname3" onclick="show_movie(this)" >北京遇上西雅图</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >人再囧途之泰囧</a>
+                    <a id="rname4" onclick="show_movie(this)" >人再囧途之泰囧</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >布拉姆的异想世界</a>
+                    <a id="rname5" onclick="show_movie(this)" >布拉姆的异想世界</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >碟中谍5：神秘国度</a>
+                    <a id="rname6" onclick="show_movie(this)" >碟中谍5：神秘国度</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >花开伊吕波剧场版：甜蜜的家</a>
+                    <a id="rname7" onclick="show_movie(this)" >花开伊吕波剧场版：甜蜜的家</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >亡国的阿基德第4章：憎恨记忆</a>
+                    <a id="rname8" onclick="show_movie(this)" >亡国的阿基德第4章：憎恨记忆</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >爱在午夜降临前</a>
+                    <a id="rname9" onclick="show_movie(this)" >爱在午夜降临前</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)">海底总动员2：多莉去哪儿</a>
+                    <a id="rname10" onclick="show_movie(this)">海底总动员2：多莉去哪儿</a>
                 </li>
                 <li class="collection-item">
-                    <a onclick="show_movie(this)" >弗兰西丝·哈</a>
+                    <a id="rname11" onclick="show_movie(this)" >弗兰西丝·哈</a>
                 </li>
                 <li class="collection-item">
-                    <a  onclick="show_movie(this)" >霍比特人2：史矛革之战</a>
+                    <a id="rname12" onclick="show_movie(this)" >霍比特人2：史矛革之战</a>
                 </li>
             </ul>
         </div>

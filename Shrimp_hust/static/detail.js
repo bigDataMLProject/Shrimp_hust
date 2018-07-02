@@ -2,6 +2,7 @@
  * Created by tcz on 18-7-1.
  */
 
+
 $(document).ready(function () {
     data = sessionStorage.getItem("key");
     res = JSON.parse(data);
@@ -16,4 +17,7 @@ $(document).ready(function () {
     document.getElementById("time").textContent ="时长：" + res["time"] +"分钟";
     document.getElementById("rate").textContent ="评分：" + res["rate"];
     }
-)
+);
+
+
+

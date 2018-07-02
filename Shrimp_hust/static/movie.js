@@ -1,6 +1,19 @@
 /**
  * Created by tcz on 18-6-30.
  */
+$(document).ready(function () {
+    data = sessionStorage.getItem("rname");
+    rname = JSON.parse(data);
+    //alert(res["name"]);
+    for(i =0; i<13; i++){
+        recom = "rname" + i;
+        document.getElementById(recom).textContent = rname[recom];
+    }
+
+
+    }
+)
+
 function search_movie(target) {
     var movie_type = {"type":$(target).text()};
     //alert(movie_type);
@@ -33,9 +46,7 @@ function search_movie(target) {
 function show_movie(target) {
     var movie_name = {"name":$(target).text()};
     // window.open("http://www.baidu.com");
-    //alert(1);
 
-    //
      $.ajax(
         {
             url: '/Shrimp_hust/show/',
@@ -60,12 +71,22 @@ function show_movie(target) {
     window.open("detail/");
 }
 
-//$(".button-collapse").sideNav();
+function select_movie(){
+    if(event.keyCode == 13){
+        var info = {"info": document.getElementById("search").value};
+        alert(document.getElementById("search").value)
+        $.ajax(
+        {
+            url: '/Shrimp_hust/select/',
+            type: "POST",
+            data: info,
+            async: false,
+            success: function (data) {
+                movie_data = data;
+            }
+        }
+    );
+    }
+}
 
-// $('.button-collapse').sideNav({
-//       menuWidth: 300, // Default is 240
-//       edge: 'right', // Choose the horizontal origin
-//       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-//       draggable: true // Choose whether you can drag to open on touch screens
-//     }
-//   );
+
