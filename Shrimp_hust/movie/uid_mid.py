@@ -19,6 +19,7 @@ def recommendationM(uid):
 
     model=MatrixFactorizationModel.load(sc,'/tmp/model')
     result = list(map(lambda x:x[1],model.recommendProducts(id,10)))
+    return result
 
 if __name__ == '__main__':
     print(recommendationM('1000545'))

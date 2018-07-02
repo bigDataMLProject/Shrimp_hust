@@ -10,7 +10,7 @@ def index(request):
     result = {}
     nums = []
     movie = Movie.objects.all().all()
-    print(movie)
+    #print(movie)
     for i in range(7):
         num = random.randint(0, len(movie))
         nums.append(num)
@@ -39,8 +39,10 @@ def search(request):
     # print(result)
     return HttpResponse(json.dumps(result))
 
-#def search_key(request):
+'''
+def search_key(request):
     # raw code without test
-
+    
     
 
+'''
