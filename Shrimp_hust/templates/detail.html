@@ -2,116 +2,121 @@
 <html lang="zh">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>虾华电影</title>
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/static/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/static/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 
 <body style="background-color:#fafafa">
-    <div class="row" style="margin-top:3em">
-        <div class="col s6 offset-s2">
-            <h4 id="name" class="header"></h4>
-            <div class="card horizontal small">
-                <div class="card-image">
-                    <img id="src" src="">
+<div class="row" style="margin-top:3em">
+    <div class="col s6 offset-s2">
+        <h4 id="name" class="header"></h4>
+        <div class="card horizontal small">
+            <div class="card-image">
+                <img id="src" src="">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <p id="director"></p>
+                    <p id="editor"></p>
+                    <p id="actor"></p>
+                    <p id="type"></p>
+                    <p id="area"></p>
+                    <p id="time"></p>
+                    <p id="rate"></p>
                 </div>
-                <div class="card-stacked">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-top:4em">
+    <div class="col s10 offset-s1">
+        <div class="row">
+            <div style="margin-left: 10em">
+                <h5>相似电影</h5>
+            </div>
+
+            <div class="col s2 offset-s1">
+                <div class="card small">
+                    <div class="card-image">
+                        <img id="src1"
+                             src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1666780812.jpg">
+                    </div>
                     <div class="card-content">
-                        <p id="director"></p>
-                        <p id="editor"></p>
-                        <p id="actor"></p>
-                        <p id="type"></p>
-                        <p id="area"></p>
-                        <p id="time"></p>
-                        <p id="rate"></p>
+                        <p id="type1">科幻/动画</p>
+                    </div>
+                    <div class="card-action">
+                        <a id="name1" style="cursor:pointer" onclick="new_movie(this)">壳中少女：排气</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s2">
+                <div class="card small">
+                    <div class="card-image">
+                        <img id="src2"
+                             src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1744650844.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p id="type2">剧情/爱情/动画</p>
+                    </div>
+                    <div class="card-action">
+                        <a id="name2" style="cursor:pointer" onclick="new_movie(this)">图书馆战争：革命之翼</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s2">
+                <div class="card small">
+                    <div class="card-image">
+                        <img id="src3"
+                             src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1903380040.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p id="type3">剧情</p>
+                    </div>
+                    <div class="card-action">
+                        <a id="name3" style="cursor:pointer" onclick="new_movie(this)">浮城谜事</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s2">
+                <div class="card small">
+                    <div class="card-image">
+                        <img id="src4"
+                             src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1722545381.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p id="type4">动作/奇幻/冒险</p>
+                    </div>
+                    <div class="card-action">
+                        <a id="name4" style="cursor:pointer" onclick="new_movie(this)">最后的巫师猎人</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s2 ">
+                <div class="card small">
+                    <div class="card-image">
+                        <img id="src5"
+                             src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2282434035.jpg">
+                    </div>
+                    <div class="card-content">
+                        <p id="type5">科幻/动画</p>
+                    </div>
+                    <div class="card-action">
+                        <a id="name5" style="cursor:pointer" onclick="new_movie(this)">饥饿游戏3：嘲笑鸟(下)</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="row" style="margin-top:4em">
-        <div class="col s10 offset-s1">
-            <div class="row">
-                <div style="margin-left: 10em">
-                    <h5>相似电影</h5>
-                </div>
-                <div class="col s2 offset-s1">
-                    <div class="card small">
-                        <div class="card-image">
-                            <img id="src0" src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2282434035.jpg">
-                        </div>
-                        <div class="card-content" style="height: 1em;">
-                            <p id="type0">科幻/动画</p>
-                        </div>
-                        <div class="card-action">
-                            <a onclick="new_movie(this)" id="name0">饥饿游戏3：嘲笑鸟(下)</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s2">
-                    <div class="card small">
-                        <div class="card-image">
-                            <img id="src1" src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1666780812.jpg">
-                        </div>
-                        <div class="card-content">
-                            <p id="type1">科幻/动画</p>
-                        </div>
-                        <div class="card-action">
-                            <a id="name1" onclick="new_movie(this)"">壳中少女：排气</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s2">
-                    <div class="card small">
-                        <div class="card-image">
-                            <img onclick="test()" id="src2" src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1744650844.jpg">
-                        </div>
-                        <div class="card-content">
-                            <p id="src2">剧情/爱情/动画</p>
-                        </div>
-                        <div class="card-action">
-                            <a id="name2" onclick="new_movie(this)">图书馆战争：革命之翼</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s2">
-                    <div class="card small">
-                        <div class="card-image">
-                            <img id="src3" src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1903380040.jpg">
-                        </div>
-                        <div class="card-content">
-                            <p id="type3">剧情</p>
-                        </div>
-                        <div class="card-action">
-                            <a id="name3" onclick="new_movie(this)">浮城谜事</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s2">
-                    <div class="card small">
-                        <div class="card-image">
-                            <img id="src4" src="https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p1722545381.jpg">
-                        </div>
-                        <div class="card-content">
-                            <p id="type4">动作/奇幻/冒险</p>
-                        </div>
-                        <div class="card-action">
-                            <a id="name4" onclick="new_movie(this)">最后的巫师猎人</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="/static/materialize.min.js"></script>
-    <script src="/static/detail.js"></script>
-    <script src="/static/detail2.js"></script>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/static/materialize.min.js"></script>
+<script src="/static/detail.js"></script>
+<script src="/static/detail2.js"></script>
 </body>
 </html>

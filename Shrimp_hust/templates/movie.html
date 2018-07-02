@@ -13,29 +13,12 @@
 </head>
 
 <body style="background-color:#fafafa">
-
-  <ul id="slide-out" class="side-nav">
-    <li><div class="userView">
-      <div class="background">
-        <img src="images/office.jpg">
-      </div>
-      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#!name"><span class="white-text name">张三</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@sina.com</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>带图标的第一链接</a></li>
-    <li><a href="#!">第二链接</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">子标题</a></li>
-    <li><a class="waves-effect" href="#!">带波纹效果的第三链接</a></li>
-  </ul>
-  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     <div class="row" style="margin-top:6em">
         <div class="col s6 offset-s3">
             <div class="search">
                 <div class="search-wrapper card">
                     <input id="search" onkeypress="select_movie();">
-                    <a onclick="select_movie();"><i class="material-icons" id="search_start">search</i></a>
+                    <a ><i class="material-icons" id="search_start">search</i></a>
                 </div>
             </div>
         </div>
@@ -57,22 +40,22 @@
     <div class="row">
         <div class="col s1 offset-s1">
             <div class="collection">
-                <a  onclick="search_movie(this)" class="collection-item">动作</a>
-                <a  onclick="search_movie(this)" class="collection-item">科幻</a>
-                <a  onclick="search_movie(this)" class="collection-item">喜剧</a>
-                <a  onclick="search_movie(this)" class="collection-item">冒险</a>
-                <a  onclick="search_movie(this)" class="collection-item">动画</a>
-                <a  onclick="search_movie(this)" class="collection-item">剧情</a>
-                <a  onclick="search_movie(this)" class="collection-item">爱情</a>
-                <a  onclick="search_movie(this)" class="collection-item">犯罪</a>
-                <a  onclick="search_movie(this)" class="collection-item">战争</a>
-                <a  onclick="search_movie(this)" class="collection-item">悬疑</a>
-                <a  onclick="search_movie(this)" class="collection-item">玄幻</a>
-                <a  onclick="search_movie(this)" class="collection-item">传记</a>
-                <a  onclick="search_movie(this)" class="collection-item">同性</a>
-                <a  onclick="search_movie(this)" class="collection-item">家庭</a>
-                <a  onclick="search_movie(this)" class="collection-item">惊悚</a>
-                <a  onclick="search_movie(this)" class="collection-item">西部</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >动作</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >科幻</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >喜剧</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >冒险</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >动画</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >剧情</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >爱情</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >犯罪</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >战争</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >悬疑</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >玄幻</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >传记</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >同性</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >家庭</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >惊悚</a>
+                <a  onclick="search_movie(this)" class="collection-item" style="cursor:pointer" >西部</a>
             </div>
         </div>
         <div class="col s7" style="margin-left: 5em">
@@ -86,7 +69,7 @@
                             <p id="type0">{{ type0 }}</p>
                         </div>
                         <div class="card-action">
-                            <a onclick="show_movie(this)" id="name0" >{{ name0 }}</a>
+                            <a  style="cursor:pointer" onclick="show_movie(this)" id="name0" >{{ name0 }}</a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +82,7 @@
                             <p id="type1">{{ type1 }}</p>
                         </div>
                         <div class="card-action">
-                            <a onclick="show_movie(this)"  id="name1" >{{ name1 }}</a>
+                            <a  style="cursor:pointer" onclick="show_movie(this)"  id="name1" >{{ name1 }}</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +95,7 @@
                             <p id="type2">{{ type2 }}</p>
                         </div>
                         <div class="card-action">
-                            <a onclick="show_movie(this)"  id="name2" >{{ name2 }}</a>
+                            <a  style="cursor:pointer" onclick="show_movie(this)"  id="name2" >{{ name2 }}</a>
                         </div>
                     </div>
                 </div>
@@ -127,7 +110,7 @@
                             <p id="type3">{{ type3 }}</p>
                         </div>
                         <div class="card-action">
-                            <a onclick="show_movie(this)"  id="name3" >{{ name3 }}</a>
+                            <a  style="cursor:pointer" onclick="show_movie(this)"  id="name3" >{{ name3 }}</a>
                         </div>
                     </div>
                 </div>
@@ -140,7 +123,7 @@
                             <p id="type4">{{ type4 }}</p>
                         </div>
                         <div class="card-action">
-                            <a onclick="show_movie(this)" id="name4" >{{ name4 }}</a>
+                            <a  style="cursor:pointer" onclick="show_movie(this)" id="name4" >{{ name4 }}</a>
                         </div>
                     </div>
                 </div>
@@ -153,7 +136,7 @@
                             <p id="type5">{{ type5 }}</p>
                         </div>
                         <div class="card-action">
-                            <a onclick="show_movie(this)" id="name5">{{ name5 }}</a>
+                            <a  style="cursor:pointer" onclick="show_movie(this)" id="name5">{{ name5 }}</a>
                         </div>
                     </div>
                 </div>
@@ -165,43 +148,43 @@
                     <h4>推荐电影</h4>
                 </li>
                 <li class="collection-item">
-                    <a id="rname0" onclick="show_movie(this)" >摩纳哥王妃</a>
+                    <a id="rname0"  style="cursor:pointer" onclick="show_movie(this)" >摩纳哥王妃</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname1" onclick="show_movie(this)" >维克多·弗兰肯斯坦</a>
+                    <a id="rname1"  style="cursor:pointer" onclick="show_movie(this)" >维克多·弗兰肯斯坦</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname2" onclick="show_movie(this)" >X战警：逆转未来</a>
+                    <a id="rname2"  style="cursor:pointer" onclick="show_movie(this)" >X战警：逆转未来</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname3" onclick="show_movie(this)" >北京遇上西雅图</a>
+                    <a id="rname3"  style="cursor:pointer" onclick="show_movie(this)" >北京遇上西雅图</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname4" onclick="show_movie(this)" >人再囧途之泰囧</a>
+                    <a id="rname4"  style="cursor:pointer" onclick="show_movie(this)" >人再囧途之泰囧</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname5" onclick="show_movie(this)" >布拉姆的异想世界</a>
+                    <a id="rname5"  style="cursor:pointer" onclick="show_movie(this)" >布拉姆的异想世界</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname6" onclick="show_movie(this)" >碟中谍5：神秘国度</a>
+                    <a id="rname6"  style="cursor:pointer" onclick="show_movie(this)" >碟中谍5：神秘国度</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname7" onclick="show_movie(this)" >花开伊吕波剧场版：甜蜜的家</a>
+                    <a id="rname7"  style="cursor:pointer" onclick="show_movie(this)" >花开伊吕波剧场版：甜蜜的家</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname8" onclick="show_movie(this)" >亡国的阿基德第4章：憎恨记忆</a>
+                    <a id="rname8"  style="cursor:pointer" onclick="show_movie(this)" >亡国的阿基德第4章：憎恨记忆</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname9" onclick="show_movie(this)" >爱在午夜降临前</a>
+                    <a id="rname9"  style="cursor:pointer" onclick="show_movie(this)" >爱在午夜降临前</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname10" onclick="show_movie(this)">海底总动员2：多莉去哪儿</a>
+                    <a id="rname10"  style="cursor:pointer" onclick="show_movie(this)">海底总动员2：多莉去哪儿</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname11" onclick="show_movie(this)" >弗兰西丝·哈</a>
+                    <a id="rname11"  style="cursor:pointer" onclick="show_movie(this)" >弗兰西丝·哈</a>
                 </li>
                 <li class="collection-item">
-                    <a id="rname12" onclick="show_movie(this)" >霍比特人2：史矛革之战</a>
+                    <a id="rname12"  style="cursor:pointer" onclick="show_movie(this)" >霍比特人2：史矛革之战</a>
                 </li>
             </ul>
         </div>

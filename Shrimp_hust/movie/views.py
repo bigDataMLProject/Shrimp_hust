@@ -4,7 +4,7 @@ from django.shortcuts import render_to_response
 from movie.models import Movie
 import random
 import json
-from movie.uid_mid import recommendationM
+from movie.uid_mid import recommendationM,recommend_by_movie
 
 
 def index(request):
@@ -44,6 +44,7 @@ def show(request):  # 未完成
     detail = {}
     if request.method == "POST":     # 对点击的电影进行详细信息的展示
         movie_name = request.POST.get("name")
+        detail = recommend_by_movie(movie_name)
         movie = Movie.objects.get(m_name=movie_name)
         detail["name"] = movie.m_name
         detail["src"] = movie.imgurl
@@ -54,6 +55,7 @@ def show(request):  # 未完成
         detail["area"] = movie.area
         detail["time"] = movie.length
         detail["rate"] = movie.rate
+        print(detail)
     return HttpResponse(json.dumps(detail))
 
 
@@ -73,23 +75,26 @@ def getid(request):  # 获取用户登录名，根据用户名进行推荐
     return HttpResponse(json.dumps(recommend))
 
 
-def select_movie(request):  # 未完成 search by key word
+def select_movie(request):  # 未完成
     res = {}
+    index = 0
     if request.method == "POST":
         info = request.POST.get("info")  # 获取搜索框的内容，根据info进行查询并返回数据
-        movies_exact = Movie.objects.get(m_name=info)
-        movie_apro = Movie.objects.filter(m_name__contains=info)
-        # srci typei namei
+        print(info)
+        movies_exact = Movie.objects.filter(m_name__exact=info)
+        movie_apro = Movie.objects.filter(m_name__contains=info).exclude(m_name=info)
+        print(len(movie_apro))
         if movies_exact :
-            res['src{}'.format(0)] = movies_exact.imgurl
-            res['type{}'.format(0)] = movies_exact.type
-            res['name{}'.format(0)] = movies_exact.m_name
-
+            res['src{}'.format(index)] = movies_exact[0].imgurl
+            res['type{}'.format(index)] = movies_exact[0].type
+            res['name{}'.format(index)] = movies_exact[0].m_name
+            index += 1
         for x in range(len(movie_apro)):
-            if movie_exact :
-                x+=1
-            res['src{}'.format(x)] = movies_exact[x].imgurl
-            res['type{}'.format(x)] = movies_exact[x].type
-            res['name{}'.format(x)] = movies_exact[x].m_name
-
+            print(movie_apro[x].m_name)
+            res['src{}'.format(index)] = movie_apro[x].imgurl
+            res['type{}'.format(index)] = movie_apro[x].type
+            res['name{}'.format(index)] = movie_apro[x].m_name
+            index += 1
+    res["num"] = index
+    print(res)
     return HttpResponse(json.dumps(res))
