@@ -11,19 +11,36 @@ def recommendationM(uid):
     url_ = "jdbc:mysql://wander:3306/big_data"
     driver_ = "com.mysql.jdbc.Driver"
     table = "user"
-    dataf = sqlContext.read.format("jdbc").options(url=url_, driver=driver_, dbtable=table, user="root", password="qwer123").load()
-    sqlContext.registerDataFrameAsTable(dataf,'user')
-
-    id =  sqlContext.sql("select id from user where user.u_id ="+"'"+str(uid)+"'").take(1)[0]['id']
 
     model=MatrixFactorizationModel.load(sc,'/tmp/model')
 
-    result = list(map(lambda x:x[1],model.recommendProducts(id,13)))
-    return result
+    dataf = sqlContext.read.format("jdbc").options(url=url_, driver=driver_, dbtable='user';, user="root", password="qwer123").load()
+    datam = sqlContext.read.format("jdbc").options(url=url_, driver=driver_, dbtable='movie', user="root", password="qwer123").load()
+
+    sqlContext.registerDataFrameAsTable(dataf,'user')
+    sqlContext.registerDataFrameAsTable(datam,,'movie')
+
+    row =  sqlContext.sql("select id from user where user.u_id ="+"'"+str(uid)+"'")
+    fixed = sqlContext.sql("select id from user where user.u_id = 'zzxxyy'")
+
+    mn=[]
+    mid=[]
+    rmovie={}
+
+    if row.count() == 0:
+        id = fixed.take(1)[0]['id']
+        mid = list(map(lambda x:x[1],model.recommendProducts(id,13)))
+
+    else :
+        id = row.take(1)[0]['id']
+        mid = list(map(lambda x:x[1],model.recommendProducts(id,13)))
+
+    for x in range(len(mid)):
+        mn.append ( sqlContext.sql("select m_name from movie where m_id ="+"'"+str(mid[x])+"'").take(1)[0]['m_name'])
+        rmovie['rname'+str(x)] =mn[x]
+
+    return rmovie 
 
 if __name__ = '__main__':
     print(recommendationM('zzxxyy')
-
-
->>>>>>> 781ae6d97531e6e6dc9389df218c0bcf6c5083a3
 

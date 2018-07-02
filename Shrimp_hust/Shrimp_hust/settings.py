@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'big_data',
         'USER': 'root',
         'PASSWORD': '970623',
-        'HOST': 'localhost',
+        'HOST': 'tcz-PC',
         'PORT': '3306',
     }
 }
