@@ -28,22 +28,44 @@ function search_movie(target) {
         }
     )
 
-    //location.reload()
 }
 
-function test(data) {
-    alert(data)
+function show_movie(target) {
+    var movie_name = {"name":$(target).text()};
+    // window.open("http://www.baidu.com");
+    //alert(1);
+
+    //
+     $.ajax(
+        {
+            url: '/Shrimp_hust/show/',
+            type: "POST",
+            data: movie_name,
+            async: false,
+            success: function (data) {
+                //data1 = data;
+                //movie_data = JSON.parse(data);
+                movie_data = data;
+                //alert(2);
+                //movie_data = data;
+                //document.getElementById("show").textContent = "TCZ";
+
+            }
+        }
+    );
+    // alert(3);
+    //alert(movie_data);
+    sessionStorage.setItem("key", movie_data);
+    //alert(data1);
+    window.open("detail/");
 }
 
-function show_movie(data) {
-    data = JSON.parse(data);
-    for(i=0;i<6;i++){
-        var src = "src"+str(i);
-        var type = "type"+str(i);
-        var name = "name"+str(i);
-        document.getElementById(src).src = data[src];
-        document.getElementById(type).src = data[type];
-        document.getElementById(name).src = data[name];
+//$(".button-collapse").sideNav();
 
-    }
-}
+// $('.button-collapse').sideNav({
+//       menuWidth: 300, // Default is 240
+//       edge: 'right', // Choose the horizontal origin
+//       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+//       draggable: true // Choose whether you can drag to open on touch screens
+//     }
+//   );

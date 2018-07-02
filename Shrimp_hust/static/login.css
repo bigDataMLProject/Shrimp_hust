@@ -1,0 +1,14 @@
+p::first-letter {
+    font-size: 1.2em;
+    color: #2196f3;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-size: 4em;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 0;
+    color: #2196f3;
+    border-bottom: 1px dashed #CCCCCC;
+}
