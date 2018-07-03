@@ -1,6 +1,6 @@
 p::first-letter {
     font-size: 1.2em;
-    color: #2196f3;
+    color: #757575;
 }
 
 p {
@@ -9,6 +9,5 @@ p {
     text-align: center;
     margin-top: 2px;
     margin-bottom: 0;
-    color: #2196f3;
-    border-bottom: 1px dashed #CCCCCC;
+    color: #757575;
 }

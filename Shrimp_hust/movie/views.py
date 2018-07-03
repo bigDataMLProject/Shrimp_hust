@@ -55,7 +55,7 @@ def show(request):  # 未完成
         detail["area"] = movie.area
         detail["time"] = movie.length
         detail["rate"] = movie.rate
-        print(detail)
+        # print(detail)
     return HttpResponse(json.dumps(detail))
 
 
@@ -80,10 +80,10 @@ def select_movie(request):  # 未完成
     index = 0
     if request.method == "POST":
         info = request.POST.get("info")  # 获取搜索框的内容，根据info进行查询并返回数据
-        print(info)
+        # print(info)
         movies_exact = Movie.objects.filter(m_name__exact=info)
         movie_apro = Movie.objects.filter(m_name__contains=info).exclude(m_name=info)
-        print(len(movie_apro))
+        # print(len(movie_apro))
         if movies_exact :
             res['src{}'.format(index)] = movies_exact[0].imgurl
             res['type{}'.format(index)] = movies_exact[0].type
@@ -96,5 +96,5 @@ def select_movie(request):  # 未完成
             res['name{}'.format(index)] = movie_apro[x].m_name
             index += 1
     res["num"] = index
-    print(res)
+    # print(res)
     return HttpResponse(json.dumps(res))

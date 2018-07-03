@@ -4,14 +4,14 @@ from movie.__init__ import *
 
 def recommendationM(uid):
 
-    url_ = "jdbc:mysql://wander:3306/big_data"
+    url_ = "jdbc:mysql://tcz-PC:3306/big_data"
     driver_ = "com.mysql.jdbc.Driver"
     table = "user"
 
 
 
-    dataf = sqlContext.read.format("jdbc").options(url=url_, driver=driver_, dbtable='user', user="root", password="qwer123").load()
-    datam = sqlContext.read.format("jdbc").options(url=url_, driver=driver_, dbtable='movie', user="root", password="qwer123").load()
+    dataf = sqlContext.read.format("jdbc").options(url=url_, driver=driver_, dbtable='user', user="root", password="970623").load()
+    datam = sqlContext.read.format("jdbc").options(url=url_, driver=driver_, dbtable='movie', user="root", password="970623").load()
 
     sqlContext.registerDataFrameAsTable(dataf,'user')
     sqlContext.registerDataFrameAsTable(datam,'movie')
@@ -42,7 +42,7 @@ import pymysql
 
 
 def recommend_by_movie(movie):
-    db = pymysql.connect("localhost", "root", "qwer123", "big_data", charset="utf8")
+    db = pymysql.connect("localhost", "root", "970623", "big_data", charset="utf8")
     cur = db.cursor()
     # movie="功夫"
     sql1 = "SELECT m_id FROM movie WHERE m_name='%s'" % (movie)

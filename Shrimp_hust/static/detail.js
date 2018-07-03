@@ -1,8 +1,6 @@
  /**
  * Created by tcz on 18-7-1.
  */
-
-
 $(document).ready(function () {
     data = sessionStorage.getItem("key");
     //alert(data);

@@ -1,15 +1,23 @@
 /**
  * Created by tcz on 18-6-30.
  */
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $(".button-collapse").sideNav();
+  });
+
+
 $(document).ready(function () {
         data = sessionStorage.getItem("rname");
+        username = sessionStorage.getItem("username");
+        document.getElementById("username").textContent = username;
         rname = JSON.parse(data);
         for (i = 0; i < 13; i++) {
             recom = "rname" + i;
             document.getElementById(recom).textContent = rname[recom];
         }
     }
-)
+);
 
 function search_movie(target) {
     var movie_type = {"type": $(target).text()};
