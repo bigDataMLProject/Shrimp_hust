@@ -42,7 +42,7 @@ import pymysql
 
 
 def recommend_by_movie(movie):
-    db = pymysql.connect("localhost", "root", "970623", "big_data", charset="utf8")
+    db = pymysql.connect("localhost", "root", "qwer123", "big_data", charset="utf8")
     cur = db.cursor()
     # movie="功夫"
     sql1 = "SELECT m_id FROM movie WHERE m_name='%s'" % (movie)
