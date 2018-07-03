@@ -44,6 +44,12 @@ version 1.0.1
 * logo
 * 超级搜索
 * 用户注册
+
+
+![1530350870483](assert/login.png)
+![1530350870483](assert/index.png)
+![1530350870483](assert/user.png)
+![1530350870483](assert/login.png)
 **贴图**
 
 **part2**
