@@ -57,7 +57,7 @@ version 1.0.1
 * 模型优化
 * 模型保存
 * 模型推荐
-![training srceenshot](training_sc.png)
+![training srceenshot](assert/training_sc.png)
 代码文件 
 * train_rating.py
 * uid_mid.py
