@@ -49,7 +49,7 @@ version 1.0.1
 ![1530350870483](assert/login.png)
 ![1530350870483](assert/index.png)
 ![1530350870483](assert/user.png)
-![1530350870483](assert/深度截图_google-chrome_20180703174810.png)
+![1530350870483](assert/detail.png)
 
 
 **part2**     **齐**
