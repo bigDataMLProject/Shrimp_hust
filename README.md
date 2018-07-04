@@ -27,7 +27,7 @@ ALS算法model 存储在hadoop:/tmp/model/
 version 1.0.1
 
 **part1**
-前端界面：
+前端界面：     **唐**
 
 已完成
 * 页面跳转
@@ -52,7 +52,7 @@ version 1.0.1
 ![1530350870483](assert/深度截图_google-chrome_20180703174810.png)
 
 
-**part2**
+**part2**     **齐**
 针对用户推荐
 * 模型优化
 * 模型保存
@@ -62,7 +62,7 @@ version 1.0.1
 * train_rating.py
 * uid_mid.py
 
-**part3**
+**part3**     **张**
 针对电影推荐
 * 特征融合
 
