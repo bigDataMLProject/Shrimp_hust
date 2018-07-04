@@ -90,7 +90,7 @@ def select_movie(request):  # 未完成
             res['name{}'.format(index)] = movies_exact[0].m_name
             index += 1
         for x in range(len(movie_apro)):
-            print(movie_apro[x].m_name)
+            # print(movie_apro[x].m_name)
             res['src{}'.format(index)] = movie_apro[x].imgurl
             res['type{}'.format(index)] = movie_apro[x].type
             res['name{}'.format(index)] = movie_apro[x].m_name
