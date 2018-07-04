@@ -50,13 +50,14 @@ version 1.0.1
 ![1530350870483](assert/index.png)
 ![1530350870483](assert/user.png)
 ![1530350870483](assert/深度截图_google-chrome_20180703174810.png)
-**贴图**
+
 
 **part2**
 针对用户推荐
 * 模型优化
 * 模型保存
 * 模型推荐
+
 代码文件 
 * train_rating.py
 * uid_mid.py
@@ -64,5 +65,6 @@ version 1.0.1
 **part3**
 针对电影推荐
 * 特征融合
+
 代码文件
 * g.py
